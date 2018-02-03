@@ -1,6 +1,7 @@
 ﻿using ForexApp.Extensions;
 using ForexApp.Model;
 using ForexApp.Services;
+using Microsoft.AppCenter.Analytics;
 using Prism.Navigation;
 using Prism.Services;
 using System.Collections.Generic;
@@ -155,6 +156,7 @@ namespace ForexApp.ViewModels
         private async Task AddSymbol()
         {
             var symbol = this.NewQuoteSymbol;
+            Analytics.TrackEvent("AddSymbol", new Dictionary<string, string> { ["symbol"] = symbol });
 
             // Get new market data + update UI
             var quoteDto = await this.forexService.GetQuote(symbol);

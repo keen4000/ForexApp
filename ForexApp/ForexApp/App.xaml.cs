@@ -3,7 +3,9 @@ using ForexApp.Helpers;
 using ForexApp.Services;
 using ForexApp.ViewModels;
 using ForexApp.Views;
-
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
 
